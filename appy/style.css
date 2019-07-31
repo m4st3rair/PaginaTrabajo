@@ -120,6 +120,24 @@ input:-webkit-autofill:focus {
 .bttn-white {
     position: relative;
     background: rgb(72, 44, 191);
+	background: rgb(236,62,24);
+    background: -webkit-linear-gradient(45deg, rgba(236,62,24, 1) 0%, rgba(255, 110,79, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(236,62,24, 1) 0%, rgba(255, 110,79, 1) 100%);
+    background: linear-gradient(45deg, rgba(236,62,24, 1) 0%, rgba(255, 110,79, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#482cbf', endColorstr='#6ac6f0', GradientType=1);
+    overflow: hidden;
+    z-index: 1;
+    margin-right: 10px;
+    border: none;
+}
+.bttn-orng {
+    position: relative;
+    background: rgb(236,62,24);
+    background: -webkit-linear-gradient(45deg, rgba(236,62,24, 1) 0%, rgba(255, 110,79, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(236,62,24, 1) 0%, rgba(255, 110,79, 1) 100%);
+    background: linear-gradient(45deg, rgba(236,62,24, 1) 0%, rgba(255, 110,79, 1) 100%);
+	
+	
     background: -webkit-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
     background: -o-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
     background: linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
@@ -485,9 +503,9 @@ input:-webkit-autofill:focus {
 /*-- 10. Feature-Area --*/
 
 .feature-area {
-    color: #ffffff;
+    color: #fcff44;
     background-color: #5e88fc;
-    background-image: url('images/feature-bg.png');
+    background-image: url('images/03.jpg');
     background-position: bottom -120px center;
     background-repeat: no-repeat;
     background-size: auto 94%;
@@ -639,7 +657,93 @@ input:-webkit-autofill:focus {
 }
 
 /*-- 13. Gallery-Area --*/
+img {
+  vertical-align: middle;
+}
 
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+/*-----------------------------------------------------------------------*/
 .gallery-area {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#482cbf+0,6ac6f0+100 */
     background: rgb(72, 44, 191);
@@ -656,7 +760,7 @@ input:-webkit-autofill:focus {
 }
 
 .gallery-slide .owl-stage-outer {
-    background: url('images/mobile-screen.png') no-repeat center right / auto 100%;
+    background: url('images/mobile-screen.ng') no-repeat center right / auto 100%;
 
 }
 
