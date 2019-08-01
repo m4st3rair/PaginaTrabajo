@@ -506,6 +506,7 @@ input:-webkit-autofill:focus {
     color: #fcff44;
     background-color: #5e88fc;
     background-image: url('images/03.jpg');
+	
     background-position: bottom -120px center;
     background-repeat: no-repeat;
     background-size: auto 94%;
