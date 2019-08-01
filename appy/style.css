@@ -505,8 +505,7 @@ input:-webkit-autofill:focus {
 .feature-area {
     color: #000000;
     background-color: #5e88fc;
-    background-image: url('images/03.jpg');
-	
+    background-image: url('images/05blur.jpg');	
     background-position: bottom -120px center;
     background-repeat: no-repeat;
     background-size: auto 94%;
@@ -1434,4 +1433,9 @@ img {
 
 .form-double .box.last {
     float: right;
+}
+
+.map{
+	height: 400px;  /* The height is 400 pixels */
+	width: 100%;  /* The width is the width of the web page */	
 }
