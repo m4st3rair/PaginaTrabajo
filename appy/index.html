@@ -27,7 +27,71 @@
     <!--[if  IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <![endif]-->
+        
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+<style>
+    .grid-gallery {
+      display: grid;
+      grid-auto-rows: 200px;
+      grid-gap: 1rem;
+      grid-auto-flow: row dense;
+    }
+
+    @media all and (min-width: 320px) {
+      .grid-gallery {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    @media all and (min-width: 768px) {
+      .grid-gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media all and (min-width: 1024px) {
+      .grid-gallery {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    .grid-gallery__item:nth-child(11n+1) {
+      grid-column: span 1;
+    }
+
+    .grid-gallery__item:nth-child(11n+4) {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+
+    .grid-gallery__item:nth-child(11n+6) {
+      grid-column: span 3;
+      grid-row: span 1;
+    }
+
+    .grid-gallery__item:nth-child(11n+7) {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+
+    .grid-gallery__item:nth-child(11n+8) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .grid-gallery__item:nth-child(11n+9) {
+      grid-row: span 3;
+    }
+
+    .grid-gallery__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+</style>
+
+
 </head>
 
 <body data-spy="scroll" data-target=".mainmenu-area">
@@ -68,7 +132,7 @@
         
     
     <!-- Home-Area -->
-    <header class="home-area overlay" id="home_page">
+    <header class="home-area overlay" id="home_page"  >
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 hidden-sm col-md-5">
@@ -93,101 +157,39 @@
     
     
     <!-- Gallery-Area -->
-    
+    <br>
+    <br>
+    <br>
+
+
+<!--<a href="images/02.jpg" data-lightbox="Historia" data-title="hola que hace"><img src="images/01.jpg"></a>-->
+
+
     <section class="gallery-area section-padding" id="gallery_page">
-        <div class="">
-                <div class="container">
-                      <div class="mySlides">
-                        <div class="numbertext">1 / 6</div>
-                        <img src="images/01.jpg" style="width:100%">
-                      </div>
-                    
-                      <div class="mySlides">
-                        <div class="numbertext">2 / 6</div>
-                        <img src="images/02.jpg" style="width:100%">
-                      </div>
-                    
-                      <div class="mySlides">
-                        <div class="numbertext">3 / 6</div>
-                        <img src="images/03.jpg" style="width:100%">
-                      </div>
-                        
-                      <div class="mySlides">
-                        <div class="numbertext">4 / 6</div>
-                        <img src="images/04.jpg" style="width:100%">
-                      </div>
-                    
-                      <div class="mySlides">
-                        <div class="numbertext">5 / 6</div>
-                        <img src="images/05.jpg" style="width:100%">
-                      </div>
-                        
-                      <div class="mySlides">
-                        <div class="numbertext">6 / 6</div>
-                        <img src="images/06.jpg" style="width:100%">
-                      </div>
-                        
-                      <a class="prev" onclick="plusSlides(-1)">❮</a>
-                      <a class="next" onclick="plusSlides(1)">❯</a>
-                    
-                      <div class="caption-container">
-                        <p id="caption"></p>
-                      </div>
-                    
-                      <div class="row">
-                        <div class="column">
-                          <img class="demo cursor" src="images/01.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
-                        </div>
-                        <div class="column">
-                          <img class="demo cursor" src="images/02.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
-                        </div>
-                        <div class="column">
-                          <img class="demo cursor" src="images/03.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
-                        </div>
-                        <div class="column">
-                          <img class="demo cursor" src="images/04.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
-                        </div>
-                        <div class="column">
-                          <img class="demo cursor" src="images/05.jpg" style="width:100%" onclick="currentSlide(5)" alt="">
-                        </div>    
-                        <div class="column">
-                          <img class="demo cursor" src="images/06.jpg" style="width:100%" onclick="currentSlide(6)" alt="">
-                        </div>
-                      </div>
-                    </div>
-                    </div>
-					<script>
-                    var slideIndex = 1;
-                    showSlides(slideIndex);
-                    
-                    function plusSlides(n) {
-                      showSlides(slideIndex += n);
-                    }
-                    
-                    function currentSlide(n) {
-                      showSlides(slideIndex = n);
-                    }
-                    
-                    function showSlides(n) {
-                      var i;
-                      var slides = document.getElementsByClassName("mySlides");
-                      var dots = document.getElementsByClassName("demo");
-                      var captionText = document.getElementById("caption");
-                      if (n > slides.length) {slideIndex = 1}
-                      if (n < 1) {slideIndex = slides.length}
-                      for (i = 0; i < slides.length; i++) {
-                          slides[i].style.display = "none";
-                      }
-                      for (i = 0; i < dots.length; i++) {
-                          dots[i].className = dots[i].className.replace(" active", "");
-                      }
-                      slides[slideIndex-1].style.display = "block";
-                      dots[slideIndex-1].className += " active";
-                      captionText.innerHTML = dots[slideIndex-1].alt;
-                    }
-                    </script>
-                    </section>
-                    </br>
+        <div class="grid-gallery">
+            <a class="grid-gallery__item"  href="images/01.jpg" data-lightbox="Historia" data-title="Descripcion de la imagen">
+                <img class="grid-gallery__image" src="images/01.jpg">
+            </a>
+            <a class="grid-gallery__item" href="images/02.jpg" data-lightbox="Historia" data-title="Descripcion de la imagen">
+                <img class="grid-gallery__image" src="images/02.jpg">
+            </a>
+            <a class="grid-gallery__item" href="images/03.jpg" data-lightbox="Historia" data-title="Descripcion de la imagen">
+                <img class="grid-gallery__image" src="images/03.jpg">
+            </a>
+            <a class="grid-gallery__item" href="images/04.jpg" data-lightbox="Historia" data-title="Descripcion de la imagen">
+                <img class="grid-gallery__image" src="images/04.jpg">
+            </a>
+            <a class="grid-gallery__item" href="images/05.jpg" data-lightbox="Historia" data-title="Descripcion de la imagen">
+                <img class="grid-gallery__image" src="images/05.jpg">
+            </a>
+            <a class="grid-gallery__item" href="images/06.jpg" data-lightbox="Historia" data-title="Descripcion de la imagen">
+                <img class="grid-gallery__image" src="images/06.jpg">
+            </a>
+            
+        </div>
+					
+    </section>
+    </br>
     <!-- Gallery-Area-End -->
     
     <!-- About-Area -->
@@ -488,6 +490,7 @@
     <script src="js/wow.min.js"></script>
     <!--Main-active-JS-->
     <script src="js/main.js"></script>
+    <script src="js/lightbox-plus-jquery.min.js"></script>
 </body>
 
 </html>
