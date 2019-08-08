@@ -38,9 +38,7 @@ CSS INDEX
 ------------------*/
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800');
-.colorfont{
 
-}
 /*-------------------
 2. Theme Default CSS
 --------------------*/
@@ -520,7 +518,7 @@ input:-webkit-autofill:focus {
     color: #000000;
     background-color: #5e88fc;
     background-image: url('images/05blur.jpg');	
-    
+    background-position: bottom -120px center;
     background-repeat: no-repeat;
     background-size: auto 94%;
     margin-bottom: 142px;
@@ -671,25 +669,6 @@ input:-webkit-autofill:focus {
 }
 
 /*-- 13. Gallery-Area --*/
-.overlay {
-  position: absolute; 
-  bottom: 0; 
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1; 
-  width: 100%;
-  transition: .5s ease;
-  opacity:0;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
-}
-
-.container:hover .overlay {
-  opacity: 1;
-}
-
 img {
   vertical-align: middle;
 }
@@ -1075,13 +1054,10 @@ img {
     text-align: center;
 
 }
+
 .footer-bg{
-	background: rgb(72, 44, 191);
-    background: -webkit-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
-    background: -o-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
-    background: linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#482cbf', endColorstr='#6ac6f0', GradientType=1);
-	}
+	background: linear-gradient(to left, blue, white);	
+}
 .footer-box .box-icon {
     width: 75px;
     height: 75px;
