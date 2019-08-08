@@ -518,7 +518,7 @@ input:-webkit-autofill:focus {
     color: #000000;
     background-color: #5e88fc;
     background-image: url('images/05blur.jpg');	
-    background-position: bottom -120px center;
+    
     background-repeat: no-repeat;
     background-size: auto 94%;
     margin-bottom: 142px;
