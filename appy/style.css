@@ -38,7 +38,9 @@ CSS INDEX
 ------------------*/
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800');
+.colorfont{
 
+}
 /*-------------------
 2. Theme Default CSS
 --------------------*/
@@ -518,7 +520,7 @@ input:-webkit-autofill:focus {
     color: #000000;
     background-color: #5e88fc;
     background-image: url('images/05blur.jpg');	
-    background-position: bottom -120px center;
+    
     background-repeat: no-repeat;
     background-size: auto 94%;
     margin-bottom: 142px;
