@@ -1056,7 +1056,10 @@ img {
 }
 
 .footer-bg{
-	background: linear-gradient(to left, blue, white);	
+	background: rgb(72, 44, 191);
+    background: -webkit-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    background: linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);	
 }
 .footer-box .box-icon {
     width: 75px;
