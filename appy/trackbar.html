@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+
+
+</head>
+<body>
+
+<h1>Custom Range Slider</h1>
+<p id="status">OpenCV.js is loading...</p>
+<div>
+  <div class="inputoutput">
+    <img id="imageSrc" alt="No Image">
+    <img id="image2" alt="No Image">
+    <div class="caption">imageSrc <input type="file" id="fileInput" name="file" multiple/></div>
+  </div>
+  <div class="inputoutput">
+    <canvas id="canvasOutput" ></canvas>
+
+    <canvas id="canvasOutput2" ></canvas>
+
+    <div class="caption">canvasOutput</div>
+  </div>
+</div>
+<p>Drag the slider to display the current value.</p>
+
+<div class="slidecontainer">
+  <input type="range" min="0" max="255" value="0" class="slider" id="myRange" oninput="fun()">
+  <p>Value: <span id="demo"></span></p>
+  <input type="range" min="0" max="255" value="0" class="slider" id="myRange2" oninput="fun1()">
+  <p>Value: <span id="demo2"></span></p>
+</div>
+
+
+<script type="text/javascript">
+var min =0;
+var max =255;
+
+function fun() {
+    var slider = document.getElementById("myRange");
+    document.getElementById("demo").innerHTML= slider.value
+    min= Number(slider.value);
+    callback(imgElement,"canvasOutput");
+    callback(img2,"canvasOutput2");
+}
+
+function fun1() {
+    var slider2 = document.getElementById("myRange2");
+    document.getElementById("demo2").innerHTML= slider2.value
+    max = Number(slider2.value);
+    callback(imgElement,"canvasOutput");
+    callback(img2,"canvasOutput2");
+}
+
+
+let imgElement = document.getElementById('imageSrc');
+let img2 = document.getElementById('image2');
+
+let inputElement = document.getElementById('fileInput');
+
+inputElement.addEventListener('change', (e) => {
+  
+  imgElement.src = URL.createObjectURL(e.target.files[0]);
+  img2.src = URL.createObjectURL(e.target.files[1]);
+  //callback();
+}, false);
+
+function callback(im, canv) {
+  let dst = new cv.Mat();
+  let src = cv.imread(im);
+  cv.cvtColor(src, dst, cv.COLOR_RGBA2GRAY, 0);
+  let tileGridSize = new cv.Size(8, 8);
+  let clahe = new cv.CLAHE(40, tileGridSize);
+  clahe.apply(dst, dst);
+
+  
+  
+  
+  //cv.adaptiveThreshold(dst, dst, 255, cv.ADAPTIVE_THRESH_MEAN_C, cv.THRESH_BINARY, min, max);
+  cv.threshold(dst, dst, min,max, cv.THRESH_BINARY_INV);
+
+  let M = cv.Mat.ones(5, 5, cv.CV_8U);
+  let anchor = new cv.Point(-1, -1);
+
+  cv.erode(dst, dst, M, anchor, 1, cv.BORDER_CONSTANT, cv.morphologyDefaultBorderValue());
+
+  cv.dilate(dst, dst, M, anchor, 1, cv.BORDER_CONSTANT, cv.morphologyDefaultBorderValue());
+  cv.imshow(canv, dst);
+  clahe.delete();
+  src.delete();
+  dst.delete();  
+}
+
+imgElement.onload = function() {
+    let dst = new cv.Mat();
+  let src = cv.imread(imgElement);
+  cv.cvtColor(src, dst, cv.COLOR_RGBA2GRAY, 0);
+  cv.imshow('canvasOutput',dst);
+  src.delete();
+  dst.delete(); 
+};
+
+function onOpenCvReady() {
+  document.getElementById('status').innerHTML = 'OpenCV.js is ready.';
+  
+}
+</script>
+<script async src="opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+</body>
+</html>
