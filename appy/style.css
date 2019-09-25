@@ -2289,3 +2289,10 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   margin-left: 0%;
   font-size: 30px;
 }
+
+#ABC {
+  background-color: blue;
+  position: relative  ; 
+  height: 2%;
+  width: 100%;
+}
