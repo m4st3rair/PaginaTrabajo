@@ -404,7 +404,7 @@ input:-webkit-autofill:focus {
 
 .mainmenu-area ul.nav.navbar-nav li a {
     color: #ffffff;
-    padding: 10px 2px;
+    padding: 0px 2px;
     text-transform: capitalize;
     background: transparent;
     font-weight: 600;
@@ -604,7 +604,7 @@ input:-webkit-autofill:focus {
 /*-- 12. Testimonial-Area --*/
 
 .testimonial-area {
-    padding-top: 60px;
+    padding-top: 120px;
     padding-bottom: 120px;
 }
 

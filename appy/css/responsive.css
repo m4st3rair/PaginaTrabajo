@@ -104,7 +104,7 @@
         margin-top: 0;
     }
     .testimonial-area {
-        padding: 60px 0;
+        padding: 120px 0;
     }
 
     .video-photo {
@@ -173,7 +173,7 @@
         display: block;
     }
     .mainmenu-area #primary_menu ul.nav.navbar-nav li a {
-        padding: 15px;
+        padding: 0px;
         border: none;
     }
     .mainmenu-area #primary_menu ul.nav.navbar-nav li.active a,
@@ -198,7 +198,7 @@
         margin-top: 0;
     }
     .testimonial-area {
-        padding: 60px 0;
+        padding: 120px 0;
     }
     .team-slide .owl-controls .owl-nav {
         text-align: center;
