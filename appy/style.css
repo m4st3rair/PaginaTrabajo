@@ -535,6 +535,7 @@ input:-webkit-autofill:focus {
 /*-- 11. Service-Box --*/
 
 .service-box {
+	height: 15%;
     position: relative;
     padding-left: 100px;
 }
