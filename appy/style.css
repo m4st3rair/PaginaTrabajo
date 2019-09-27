@@ -571,6 +571,17 @@ input:-webkit-autofill:focus {
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
 }
 
+
+.blacklink
+{
+	color:black;
+}
+
+.blacklink :hover
+{
+	color:white;
+}
+
 .team-slide .owl-controls .owl-nav > div:hover,
 .service-box:hover .box-icon {
     color: #ffffff;
@@ -2281,6 +2292,47 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 	height: 400px;  /* The height is 400 pixels */
 	width: 100%;  /* The width is the width of the web page */	
 }
+
+/*Tabla*/
+.r-table
+{
+	width:100%;
+	padding: 10px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.r-table-title
+{
+	width:50%; 
+	text-align:center;
+	font:22px sans-serif;
+	color:white;
+	background:dodgerblue;
+}
+
+.r-table-contentl
+{
+	width:50%;
+	text-align:left;
+	font:18px sans-serif;
+	margin:5px;
+	padding:5px;
+	background-color:#FBFCFC;
+}
+
+.r-table-contentc
+{
+	width:50%;
+	text-align:center;
+	font:18px sans-serif;
+	margin:5px;
+	padding:5px;
+	background:#FBFCFC;
+}
+
+
+
+
 /*Social bar*/
 .icon-bar {
   position: fixed;
