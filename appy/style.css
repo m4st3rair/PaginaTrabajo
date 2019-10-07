@@ -517,9 +517,9 @@ input:-webkit-autofill:focus {
 .feature-area {
     color: #000000;
     background-color: #5e88fc;
-    background-image: url('images/gallery/BGservicio.jpg');	
+    background-image: url('images/fondo.PNG');	
     background-repeat: no-repeat;
-    background-size: auto 100% 100%;
+    background-size: 100% 100%;
 
     margin-bottom: 142px;
 }
