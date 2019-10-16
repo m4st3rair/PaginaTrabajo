@@ -579,7 +579,7 @@ input:-webkit-autofill:focus {
 
 .blacklink :hover
 {
-	color:white;
+	color: rgba(72, 44, 191, 1);
 }
 
 .team-slide .owl-controls .owl-nav > div:hover,
