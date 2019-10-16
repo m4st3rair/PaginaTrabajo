@@ -2392,3 +2392,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   height: 2%;
   width: 100%;
 }
+
+.imgico {
+  border-radius: 50%;
+}
