@@ -536,8 +536,8 @@ input:-webkit-autofill:focus {
 
 .service-box {
 	height: 15%;
-    position: relative;
-    padding-left: 100px;
+  position: relative;
+  padding-left: 100px;
 }
 
 .team-slide .owl-controls .owl-nav > div,
@@ -2394,5 +2394,9 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 .imgico {
-  border-radius: 50%;
+  display: inline;
+  margin-bottom: 10%;;
+  height: 100%;
+  width: auto;
+  border-radius: 100%;
 }
