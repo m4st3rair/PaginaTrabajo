@@ -137,7 +137,7 @@
         font-size: 40px;
     }
     h3 {
-        font-size: 22px;
+        font-size: 12px;
     }
     .bttn-white {
         padding: 8px 30px;
@@ -245,7 +245,9 @@
       -webkit-box-flex: 0;
       -ms-flex: 0 0 50%;
       flex: 0 0 50%;
-      max-width: 50%; }
+      max-width: 50%;
+	  font-size: 5px;
+		}
 	
     .form-double .box {
         width: 100%;
