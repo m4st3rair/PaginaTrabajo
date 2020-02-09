@@ -311,6 +311,9 @@ input:-webkit-autofill:focus {
 .dark-color {
     color: #434345
 }
+.dark-colorT {
+  color: #434345
+}
 
 .blue-color {
     color: #5e88fc;
@@ -786,7 +789,16 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
       padding-left: 0; }
   
   
+  @media (min-width: 50px) {
+    .cosaTexto{color: #d8d8d8}
+    .dark-colorT{color: #e1e1e1;}
+    
+  }
+  
   @media (min-width: 576px) {
+    .cosaTexto{color: #d8d8d8}
+    .dark-colorT{color: #e1e1e1;}
+
     .col-sm {
       -ms-flex-preferred-size: 0;
       flex-basis: 0;
@@ -946,6 +958,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
       margin-left: 91.66667%; } }
   
   @media (min-width: 768px) {
+    .cosaTexto{color: #000000}
     .col-md {
       -ms-flex-preferred-size: 0;
       flex-basis: 0;
